@@ -1,0 +1,45 @@
+<body>
+
+    <form (ngSubmit)="register()" name="form" style="border:1px solid #ccc">
+      <div class="container-fluid" style="margin: auto;width: 500px;">
+        
+        <h1>Registration Form</h1>
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+
+          <label for="Village"><b>Village Name</b></label>
+          <input [(ngModel)]=user.villageName placeholder="Ramnagar" type="text" name="village" ng-model="form.required" ng-required="true">
+
+          <br><br>
+
+        <label for="fullname"><b>Full Name</b></label>  
+        <input [(ngModel)]=user.fullname type="text" placeholder="Enter fullname" name="fullname" required>
+    
+       
+    
+        <label for="address"><b>Address</b></label>
+        <input [(ngModel)]=user.address type="textarea" placeholder="Enter Address" name="address" required>
+
+        
+        <label for="pincode"><b>Pincode</b></label>
+        <input [(ngModel)]=user.pincode type="number" placeholder="Enter pincode" name="pincode" required>
+
+          
+        <label for="DateOfBirth"><b>Date Of Birth</b></label>
+        <input [(ngModel)]=user.dob type="date" placeholder="Enter DateOfBirth" name="DateOfBirth" required>
+
+        
+        <label for="username"><b>Username</b></label>
+        <input [(ngModel)]=user.username type="text" placeholder="Enter username" name="username" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input [(ngModel)]=user.password type="password" placeholder="Enter Password" name="psw" required>
+            
+        <div class="clearfix">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <button type="submit" class="signupbtn" >Register</button>
+        </div>
+      </div>
+    </form>
+
+  </body>

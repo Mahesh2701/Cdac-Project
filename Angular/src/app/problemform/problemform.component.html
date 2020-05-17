@@ -1,0 +1,30 @@
+<body>
+
+    <div class="header">
+      <h1>E-Villagers</h1>
+    </div>
+    
+    <div class="topnav">
+     
+      <a routerLink="/post">About Us </a>
+
+    </div>
+
+    <div class="container" style="margin: auto;width: 500px;">
+        <h3>Write Your Problem Here</h3>
+      <form (ngSubmit)="post()" >
+        <label for="">Problem Name</label>
+        <input [(ngModel)]=postObj.name type="text" id="name" name="name" placeholder="Your name..">
+        <label>Department Name </label>
+        <input [(ngModel)]=postObj.dept type="text" value="hii" id="dept" name="dept"  value={{problem}}  placeholder="Department name..">
+
+        <input [(ngModel)]=postObj.image type="file" name="pic" accept="image/*"><br>
+           
+         
+        <label for="subject">Subject</label>
+        <textarea [(ngModel)]=postObj.message id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+       
+        <button type="submit" >POST</button>
+      </form>
+    </div>
+    

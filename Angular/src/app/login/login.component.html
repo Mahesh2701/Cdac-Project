@@ -1,0 +1,26 @@
+<body>
+
+    <form (ngSubmit)="login()" style="border:1px solid #ccc">
+      <div class="container" style="margin: auto;width: 500px;float:right;"><br>
+        <h1>Log In</h1>
+    
+        <label for="username"><b>Username</b></label>
+        <input [(ngModel)]=user.username type="text" placeholder="Enter username" name="username" required>
+        <label for="psw"><b>Password</b></label>
+        <input [(ngModel)]=user.password type="password" placeholder="Enter Password" name="psw" required>
+ 
+        <label>
+          <input [(ngModel)]=user.checkbox type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+        </label>
+        
+        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+    
+        <div class="clearfix">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <button type="submit" class="signupbtn">Log In</button>
+          <button type="submit" class="signupbtn"  routerLink="/registration">Register</button><br><br>
+        </div>
+      </div>
+    </form>
+    <p id="ABC"></p>
+    </body>

@@ -1,0 +1,36 @@
+<body>
+
+    <form (ngSubmit)="updateuser()" style="border:1px solid #ccc">
+      <div class="container" style="margin: auto;width: 500px;">
+        
+        <p>update Your account Info</p>
+        <hr>
+    
+        <label for="fullname"><b>Full Name</b></label>
+        <input  type="text" placeholder="Enter fullname" value={{data.fullname}} [(ngModel)]=data.fullname [ngModelOptions]="{standalone: true}" required>
+
+        <label for="address"><b>Address</b></label>
+        <input type="textarea" placeholder="Enter Address" name="address" value={{data.address}} [(ngModel)]=data.address required>
+
+        <label for="pincode"><b>Pincode</b></label>
+        <input type="number" placeholder="Enter pincode" name="pincode" value={{data.pincode}}  [(ngModel)]=data.pincode required>
+ 
+        <label for="DateOfBirth"><b>Date Of Birth</b></label>
+        <input type="date" placeholder="Enter DateOfBirth" name="DateOfBirth" value={{data.dob}}  [(ngModel)]=data.dob required>
+
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter username" name="username" value={{data.username}} [(ngModel)]=data.username required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" value={{data.password}} [(ngModel)]=data.password required>
+
+        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+    
+      <div>
+          <button type="button" class="cancelbtn">Cancel</button>
+          <button type="submit" class="signupbt" >update</button>
+      </div>  
+      </div>
+    </form>
+    </body>
+

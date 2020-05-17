@@ -1,0 +1,15 @@
+<div class="container">
+    <form (ngSubmit)="inComment()">
+     
+  
+      <label for="subject"></label>
+      <textarea id="subject" [(ngModel)]=reply.content name="comment" placeholder="Write comment.." style="height:200px"></textarea>
+  
+      <input type="submit" value="Comment">
+     
+    </form>
+    <button type="submit"  value="Show comment" (click)=fetchComment()>ShowComment</button>
+  </div>
+<li *ngFor="let abc of aaa">
+  <ul>{{abc.content}}</ul>
+</li>
